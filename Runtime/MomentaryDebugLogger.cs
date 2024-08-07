@@ -15,18 +15,18 @@ namespace LoganPackages
 		[SerializeField] private RawImage ri_background;
 
 		[Header("[-----------SETTINGS----------]")]
-		[SerializeField] private float duration_momentaryDebugLoggerMessages = 1f;
-		[SerializeField] private int count_maxDebugLogMessages = 0;
+		[SerializeField] private float duration_momentaryDebugLoggerMessages = 3.5f;
+		[SerializeField] private int count_maxDebugLogMessages = 8;
 		[SerializeField, Tooltip("If enabled, causes the logger to turn the background on and off depending on whether there are messages showing.")] 
 		private bool swizzleBackground = false;
 
 		//[Header("[-----------OTHER----------]")]
-		[SerializeField] private bool debug;
-		[SerializeField] string dbgString;
 		private List<string> tempStrings = new List<string>();
 		private List<float> tempStringCountdowns = new List<float>();
 		private string threadsafeString;
 		private Color ri_background_color_cached;
+
+		//[TextArea(1,10)] public string dbgString; //uncomment this variable, and it's code in the update if you want to debug the messages in this logger.
 
 		private void Awake()
 		{
@@ -48,10 +48,6 @@ namespace LoganPackages
 		void Start()
 		{
 			CheckIfKosher();
-			//dbgStrings = new List<string>();  //commenting these out because if left in, debug messages sent on Start() from other classes won't leave the momentarydebuglogger.
-			//dbgCountdowns = new List<float>();
-
-
 		}
 
 		void Update()
@@ -98,18 +94,17 @@ namespace LoganPackages
 				}
 			}
 
-			if( debug )
-			{
-				dbgString = string.Empty;
+			/*
+			dbgString = string.Empty;
 
-				if( tempStrings.Count > 0 )
+			if( tempStrings.Count > 0 )
+			{
+				for ( int i = tempStrings.Count - 1; i > -1; i-- )
 				{
-					for ( int i = tempStrings.Count - 1; i > -1; i-- )
-					{
-						dbgString += $"{tempStrings[i]}, {tempStringCountdowns[i]}\n";
-					}
+					dbgString += $"{tempStrings[i]}, {tempStringCountdowns[i]}\n";
 				}
 			}
+			*/
 		}
 
 		public void LogMomentarily( string msg )
