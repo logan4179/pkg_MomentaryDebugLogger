@@ -1,6 +1,6 @@
 {
   "name": "com.loganland.momentarydebuglogger",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "displayName": "Momentary Debug Logger",
   "description": "Momentarily logs messages to a textmeshpro",
   "documentationUrl": "https://example.com/",
