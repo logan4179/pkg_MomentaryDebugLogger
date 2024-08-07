@@ -1,0 +1,19 @@
+{
+  "name": "com.loganland.momentarydebuglogger",
+  "version": "1.0.7",
+  "displayName": "Momentary Debug Logger",
+  "description": "Momentarily logs messages to a textmeshpro",
+  "documentationUrl": "https://example.com/",
+  "changelogUrl": "https://example.com/changelog.html",
+  "licensesUrl": "https://example.com/licensing.html",
+  "dependencies": {
+    "com.unity.textmeshpro": "3.0.8"
+  },
+  "keywords": [
+    "Debugging",
+    "Text"
+  ],
+  "author": {
+    "name": "Logan Jarrett"
+  }
+}
