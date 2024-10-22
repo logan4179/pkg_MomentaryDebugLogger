@@ -65,7 +65,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Temporary Debug Logger
+  m_text: Momentary Debug Logger
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -190,8 +190,6 @@ MonoBehaviour:
   duration_momentaryDebugLoggerMessages: 3.5
   count_maxDebugLogMessages: 8
   swizzleBackground: 1
-  debug: 0
-  dbgString: 
 --- !u!222 &53693957891763360
 CanvasRenderer:
   m_ObjectHideFlags: 0
